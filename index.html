@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Vino & Fuoco — италиански ресторант. Прясно приготвени ястия, добро вино и топло гостоприемство. Демонстрационен проект от WetBuild."
+    >
+
+    <title>Vino &amp; Fuoco — Италиански ресторант</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container nav">
+
+        <a href="#hero" class="logo">Vino <span>&amp;</span> Fuoco</a>
+
+        <nav class="desktop-nav" aria-label="Основна навигация">
+            <a href="#menu">Меню</a>
+            <a href="#gallery">Галерия</a>
+            <a href="#about">За нас</a>
+            <a href="#reviews">Отзиви</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <a href="#contact" class="button primary nav-cta">Резервирай маса</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Отвори меню" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобилна навигация">
+        <a href="#menu">Меню</a>
+        <a href="#gallery">Галерия</a>
+        <a href="#about">За нас</a>
+        <a href="#reviews">Отзиви</a>
+        <a href="#contact">Контакти</a>
+        <a href="#contact" class="button primary">Резервирай маса</a>
+    </nav>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+            <p class="hero-eyebrow">
+                <span class="badge-dot"></span>
+                Италиански ресторант &middot; София
+            </p>
+
+            <h1>
+                Вкус, който
+                <span>помниш.</span>
+            </h1>
+
+            <p class="hero-text">
+                Прясно приготвени ястия по семейни рецепти, старателно
+                подбрани вина и атмосфера, в която всяка вечеря се
+                превръща в спомен.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="button primary">
+                    Резервирай маса
+                    <span>→</span>
+                </a>
+                <a href="#menu" class="button secondary">Виж менюто</a>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal">
+            <img
+                class="hero-photo"
+                src="images/hero-pasta-shrimp.jpg"
+                alt="Сервитьор поднася чиния прясна паста със скариди на маса в топлата, атмосферна зала на Vino & Fuoco, до чаша бяло вино"
+                loading="eager"
+            >
+        </div>
+
+    </div>
+</section>
+
+
+<!-- МЕНЮ -->
+<section class="section" id="menu">
+    <div class="container">
+
+        <span class="eyebrow reveal">01 — Меню</span>
+        <h2 class="reveal">Нашето меню</h2>
+        <p class="section-lead reveal">
+            Съставено от сезонни продукти и класически италиански техники.
+            Цените са в евро, с ориентировъчна равностойност в лева.
+        </p>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Категории от менюто">
+            <button class="menu-tab active" data-category="appetizers" role="tab" aria-selected="true">Предястия</button>
+            <button class="menu-tab" data-category="mains" role="tab" aria-selected="false">Основни ястия</button>
+            <button class="menu-tab" data-category="desserts" role="tab" aria-selected="false">Десерти</button>
+            <button class="menu-tab" data-category="wine" role="tab" aria-selected="false">Вино</button>
+        </div>
+
+        <div class="menu-panels">
+
+            <div class="menu-list" data-panel="appetizers">
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Брускети с домати и базилик</h3>
+                        <span class="menu-price"><span class="price-eur">7€</span><span class="price-bgn">14 лв.</span></span>
+                    </div>
+                    <p>Препечен селски хляб, свежи домати, чесън и пресен базилик.</p>
+                </article>
+
+                <article class="menu-item has-photo reveal">
+                    <div class="menu-item-photo">
+                        <img src="images/dish-caprese.jpg" alt="Капрезе салата с бурата, резени домати, пресен босилек и балсамов сос">
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-head">
+                            <h3>Капрезе салата</h3>
+                            <span class="menu-price"><span class="price-eur">8€</span><span class="price-bgn">16 лв.</span></span>
+                        </div>
+                        <p>Моцарела бифало, домати, босилек и зехтин extra virgin.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Карпачо от телешко</h3>
+                        <span class="menu-price"><span class="price-eur">12€</span><span class="price-bgn">23 лв.</span></span>
+                    </div>
+                    <p>Тънко нарязано телешко филе, рукола, пармезан и лимонов дресинг.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Пушена сьомга с авокадо</h3>
+                        <span class="menu-price"><span class="price-eur">11€</span><span class="price-bgn">22 лв.</span></span>
+                    </div>
+                    <p>Леко пушена сьомга, крем от авокадо и пресен копър.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Крем супа от тиква</h3>
+                        <span class="menu-price"><span class="price-eur">6€</span><span class="price-bgn">12 лв.</span></span>
+                    </div>
+                    <p>Печена тиква, джинджифил и препечени тиквени семки.</p>
+                </article>
+
+            </div>
+
+            <div class="menu-list" data-panel="mains" hidden>
+
+                <article class="menu-item has-photo reveal">
+                    <div class="menu-item-photo">
+                        <img src="images/dish-risotto-truffle.jpg" alt="Кремообразно ризото с трюфели, поднесено със сочен стек и розмарин">
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-head">
+                            <h3>Ризото с трюфели</h3>
+                            <span class="menu-price"><span class="price-eur">18€</span><span class="price-bgn">35 лв.</span></span>
+                        </div>
+                        <p>Кремообразно ризото с пармезан и черен трюфел.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Таляте с морски дарове</h3>
+                        <span class="menu-price"><span class="price-eur">19€</span><span class="price-bgn">37 лв.</span></span>
+                    </div>
+                    <p>Домашна паста, миди, скариди и доматен сос с бяло вино.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Стек Рибай, 300 г</h3>
+                        <span class="menu-price"><span class="price-eur">28€</span><span class="price-bgn">55 лв.</span></span>
+                    </div>
+                    <p>Зряло говеждо на скара, розмаринови картофи и чимичури.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Пилешко салтимбока</h3>
+                        <span class="menu-price"><span class="price-eur">16€</span><span class="price-bgn">31 лв.</span></span>
+                    </div>
+                    <p>Пилешко филе с прошуто, шалфей и сос марсала.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Лазаня Болонезе</h3>
+                        <span class="menu-price"><span class="price-eur">15€</span><span class="price-bgn">29 лв.</span></span>
+                    </div>
+                    <p>Домашна лазаня с телешки рагу, бешамел и пармезан.</p>
+                </article>
+
+            </div>
+
+            <div class="menu-list" data-panel="desserts" hidden>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Тирамису</h3>
+                        <span class="menu-price"><span class="price-eur">7€</span><span class="price-bgn">14 лв.</span></span>
+                    </div>
+                    <p>Класическа рецепта с маскарпоне, кафе и какао.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Панакота с горски плодове</h3>
+                        <span class="menu-price"><span class="price-eur">6€</span><span class="price-bgn">12 лв.</span></span>
+                    </div>
+                    <p>Ванилова панакота с компот от сезонни горски плодове.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Шоколадов фондан</h3>
+                        <span class="menu-price"><span class="price-eur">8€</span><span class="price-bgn">16 лв.</span></span>
+                    </div>
+                    <p>Топъл шоколадов кекс с течна сърцевина и ванилов сладолед.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Канолѝ сицилиано</h3>
+                        <span class="menu-price"><span class="price-eur">7€</span><span class="price-bgn">14 лв.</span></span>
+                    </div>
+                    <p>Хрупкави тестени рула с крем рикота и кандирани плодове.</p>
+                </article>
+
+            </div>
+
+            <div class="menu-list" data-panel="wine" hidden>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Chianti Classico <span class="menu-item-note">(чаша)</span></h3>
+                        <span class="menu-price"><span class="price-eur">8€</span><span class="price-bgn">16 лв.</span></span>
+                    </div>
+                    <p>Тоскана, Италия — плътно червено с нотки на череша и подправки.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Pinot Grigio <span class="menu-item-note">(чаша)</span></h3>
+                        <span class="menu-price"><span class="price-eur">7€</span><span class="price-bgn">14 лв.</span></span>
+                    </div>
+                    <p>Венето, Италия — свежо бяло с цитрусов финал.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Prosecco <span class="menu-item-note">(чаша)</span></h3>
+                        <span class="menu-price"><span class="price-eur">6€</span><span class="price-bgn">12 лв.</span></span>
+                    </div>
+                    <p>Леко пенливо, идеално за аперитив.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Каберне Совиньон, България <span class="menu-item-note">(чаша)</span></h3>
+                        <span class="menu-price"><span class="price-eur">7€</span><span class="price-bgn">14 лв.</span></span>
+                    </div>
+                    <p>Местно производство — плътно, с танини и вкус на тъмни плодове.</p>
+                </article>
+
+                <article class="menu-item reveal">
+                    <div class="menu-item-head">
+                        <h3>Дегустационен сет вина <span class="menu-item-note">(3 чаши)</span></h3>
+                        <span class="menu-price"><span class="price-eur">18€</span><span class="price-bgn">35 лв.</span></span>
+                    </div>
+                    <p>Подбрана селекция от сомелиера — две червени и едно бяло.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ГАЛЕРИЯ -->
+<section class="section alt" id="gallery">
+    <div class="container">
+
+        <span class="eyebrow reveal">02 — Галерия</span>
+        <h2 class="reveal">От нашата кухня</h2>
+        <p class="section-lead reveal">
+            Реални снимки от ресторанта идват скоро — засега място за тях.
+        </p>
+
+        <div class="gallery-grid">
+
+            <figure class="gallery-item photo reveal">
+                <img src="images/gallery-table-spread.jpg" alt="Споделена вечеря на маса с пица, печена риба, салати и рози в Vino & Fuoco" loading="lazy">
+                <figcaption>Споделена вечеря</figcaption>
+            </figure>
+
+            <figure class="gallery-item photo reveal">
+                <img src="images/gallery-pasta-spinach.jpg" alt="Спагети със спанак, панчета и гъби в кремообразен сос" loading="lazy">
+                <figcaption>Паста със спанак и панчета</figcaption>
+            </figure>
+
+            <div class="gallery-item reveal"><span>Десерт</span></div>
+
+            <div class="gallery-item reveal"><span>Вино на чаша</span></div>
+
+            <figure class="gallery-item photo reveal">
+                <img src="images/gallery-pappardelle-ragu.jpg" alt="Тальятеле с рагу и настърган пармезан, поднесени с чаша вино" loading="lazy">
+                <figcaption>Тальятеле с рагу</figcaption>
+            </figure>
+
+            <div class="gallery-item reveal"><span>Кухнята</span></div>
+
+            <figure class="gallery-item photo reveal">
+                <img src="images/gallery-antipasti.jpg" alt="Табла с италиански антипасти — прошуто, салам, моцарела и мариновани зеленчуци" loading="lazy">
+                <figcaption>Antipasti табла</figcaption>
+            </figure>
+
+            <figure class="gallery-item photo reveal">
+                <img src="images/gallery-salad.jpg" alt="Свежа салата със зелена салата, ябълка, ягоди и фета" loading="lazy">
+                <figcaption>Пролетна салата</figcaption>
+            </figure>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ЗА НАС -->
+<section class="section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-text reveal">
+            <span class="eyebrow">03 — За нас</span>
+            <h2>Историята зад Vino &amp; Fuoco</h2>
+            <p>
+                Vino &amp; Fuoco се роди от любовта към италианската кухня и
+                топлото гостоприемство. От 2014 г. поднасяме ястия, приготвени
+                с прясно тесто, местни продукти и рецепти, предавани в
+                семейството ни от поколения. Всяка вечер тук е повод да
+                седнеш, да отпиеш вино и да се почувстваш у дома.
+            </p>
+        </div>
+
+        <div class="photo-placeholder reveal about-photo">
+            <span class="photo-icon" aria-hidden="true"></span>
+            <p>Снимка на екипа / кухнята — очаква се от клиента</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ОТЗИВИ -->
+<section class="section alt" id="reviews">
+    <div class="container">
+
+        <span class="eyebrow reveal">04 — Отзиви</span>
+        <h2 class="reveal">Какво казват гостите</h2>
+
+        <div class="reviews-grid">
+
+            <article class="review-card placeholder reveal">
+                <span class="placeholder-badge">PLACEHOLDER</span>
+                <div class="stars">★★★★★</div>
+                <p>Тук ще стои реален отзив от клиент.</p>
+            </article>
+
+            <article class="review-card placeholder reveal">
+                <span class="placeholder-badge">PLACEHOLDER</span>
+                <div class="stars">★★★★★</div>
+                <p>Тук ще стои реален отзив от клиент.</p>
+            </article>
+
+            <article class="review-card placeholder reveal">
+                <span class="placeholder-badge">PLACEHOLDER</span>
+                <div class="stars">★★★★★</div>
+                <p>Тук ще стои реален отзив от клиент.</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- КОНТАКТИ -->
+<section class="section" id="contact">
+    <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+            <span class="eyebrow">05 — Контакти</span>
+            <h2>Намери ни</h2>
+
+            <div class="contact-item">
+                <span class="contact-label">Адрес</span>
+                <p>ул. „Солунска“ 22, София 1000</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">Телефон</span>
+                <p><a href="tel:+359888234567">0888 234 567</a></p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">Работно време</span>
+                <p>
+                    Всеки ден: 12:00 – 23:30<br>
+                    Кухнята затваря в 23:00
+                </p>
+            </div>
+        </div>
+
+        <div class="booking-panel reveal">
+            <h3>Резервирай маса</h3>
+
+            <!-- Calendly embed placeholder: replace inner content with the
+                 real Calendly inline embed <div> + script snippet. -->
+            <div class="calendly-embed">
+                <span class="calendar-icon" aria-hidden="true">
+                    <span class="calendar-icon-top"></span>
+                </span>
+                <p>Тук ще бъде вграден онлайн календар за резервации (Calendly)</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <a href="#hero" class="logo">Vino <span>&amp;</span> Fuoco</a>
+
+        <nav class="footer-nav" aria-label="Долна навигация">
+            <a href="#menu">Меню</a>
+            <a href="#gallery">Галерия</a>
+            <a href="#about">За нас</a>
+            <a href="#reviews">Отзиви</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <p class="footer-note">
+            &copy; <span id="year"></span> Vino &amp; Fuoco — Демонстрационен проект от WetBuild.
+        </p>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
